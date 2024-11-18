@@ -36,6 +36,9 @@
     width:4rem;
     height: 2rem;
     font-weight: bold;
+    /* background color light green */
+    background-color: #4CAF50;
+    color:azure
 }
 .button2{
     position: absolute;
@@ -44,6 +47,9 @@
     width:4rem;
     height: 2rem;
     font-weight: bold;
+    /* background color for delete button */
+    background-color: #1b9bf0;
+    color:azure
 }
 .button3{
     position: absolute;
@@ -52,6 +58,8 @@
     width:4rem;
     height: 2rem;
     font-weight: bold;
+    background-color: #D8000C;
+    color:azure
 }
 .modalButton{
     background-color: #1b9bf0;
