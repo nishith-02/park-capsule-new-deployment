@@ -8,7 +8,6 @@ export default function BookSlotHistoryCard(props) {
   const [open, setOpen] = useState(false);
   const[report,setReport]=useState("")
   const [error, setError] = useState("");
-  const router=useRouter()
   const onCloseModal = () => setOpen(false);
   const router = useRouter();
   const Razorpay = useRazorpay();
