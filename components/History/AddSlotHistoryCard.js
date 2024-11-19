@@ -22,10 +22,7 @@ export default function AddSlotHistoryCard(props) {
       console.log(error);
     }
   };
-  const submitHandler=()=>{
-    setOpen(false)
-    alert("Report submitted successfully. Your money will be refunded based on your report")
-  }
+  
   const editHandler=()=>{
     const addSlot={
       twoWheelers:props.twoWheeler,
