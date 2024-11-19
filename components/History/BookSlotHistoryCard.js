@@ -3,7 +3,13 @@ import axios from "axios";
 import useRazorpay from "react-razorpay";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { Modal } from "react-responsive-modal";
 export default function BookSlotHistoryCard(props) {
+  const [open, setOpen] = useState(false);
+  const[report,setReport]=useState("")
+  const [error, setError] = useState("");
+  const router=useRouter()
+  const onCloseModal = () => setOpen(false);
   const router = useRouter();
   const Razorpay = useRazorpay();
   const [extendTime, setExtendTime] = useState();
@@ -130,6 +136,52 @@ export default function BookSlotHistoryCard(props) {
       ) : (
         ""
       )}
+      <button
+          className={styles.button3}
+          type="button"
+          onClick={() => setOpen(true)}
+        >
+          Report
+        </button>
+      <Modal
+      open={open}
+      onClose={onCloseModal}
+      center
+      showCloseIcon={false}
+    >
+      <div className={styles.modalRoot}>
+      <div className={styles.modalHead}>
+          <p className={styles.modalHeadtext}>Report Details</p>
+        </div>
+        
+        <div>
+          {error ? (
+            <div className={styles.modalError}>
+              <p>{error}</p>
+            </div>
+          ) : (
+            ""
+          )}
+          <input
+            value={report}
+            className={styles.modalInput}
+            type="text"
+            placeholder="Reason for reporting"
+            onChange={(e) => setReport(e.target.value)}
+          />
+          
+        </div>
+        <div>
+          <button
+            type="button"
+            className={styles.modalButton}
+            onClick={submitHandler}
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </Modal>
     </div>
   );
 }
