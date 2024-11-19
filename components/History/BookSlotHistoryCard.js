@@ -81,6 +81,10 @@ export default function BookSlotHistoryCard(props) {
       console.log(error);
     }
   };
+  const submitHandler=()=>{
+    setOpen(false)
+    alert("Report submitted successfully. Your money will be refunded based on your report")
+  }
   return (
     <div className={styles.root}>
       <div className={styles.image}>
