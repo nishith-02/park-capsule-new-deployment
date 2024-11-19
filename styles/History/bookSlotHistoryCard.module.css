@@ -51,12 +51,13 @@
     font-weight: bold;
 }
 .button3{
-    border-radius: 0.5rem;
-    width:14rem;
+     border-radius: .5rem;
+    width: 14rem;
     height: 2rem;
-    font-weight: bold;
-    background-color: #D8000C;
-    color:azure
+    font-weight: 700;
+    background-color: #d8000c;
+    color: azure;
+    margin-top: 2rem;
 }
 .modalButton{
     background-color: #1b9bf0;
